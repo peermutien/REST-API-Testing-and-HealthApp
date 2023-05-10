@@ -1,0 +1,26 @@
+<br><br>
+<br><br>
+
+    
+    <input class="inputBoxURL" [(ngModel)]="url" />
+    
+    <select class="inputBoxMethod" [(ngModel)]="method" >
+      <option value="GET"><b>GET</b></option>
+      <option value="POST"><b>POST</b></option>
+      <option value="PUT"><b>PUT</b></option>
+      <option value="DELETE">DELETE</option>
+    </select>
+
+    <textarea class="inputBoxBody" [(ngModel)]="body" placeholder="Enter body"></textarea>
+ 
+    <button class="appButton" (click)="Request()"><b>Send Request</b></button>
+
+    <div class="output-box" >
+      <p class="output-box-p"><b>Response:</b></p>
+      {{response}}
+    </div>
+
+    <div class="error-box">
+      <span style="color:purple;font-weight:lighter">Error Status:</span>
+      {{errorMsg}}
+    </div>

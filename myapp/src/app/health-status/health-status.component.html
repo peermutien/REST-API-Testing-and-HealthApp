@@ -1,0 +1,25 @@
+<p>health-status works!</p>
+<div class="container">
+    <br>
+    <h2 style="color:darkmagenta" ><b> Microservices Status:</b></h2>
+   
+   
+    <table class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                 <th style="color:darkmagenta; font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;"><b>Microservices</b></th>
+                <th style="color:darkmagenta; font-size: 20px;font-family:Georgia, 'Times New Roman', Times, serif;" ><b>Status</b></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+                <tr *ngFor="let service of services" class="rdiv" 
+                [ngStyle]="{ 'background-color': service.status === 'UP' ? 'green' : 'red' }"
+                 >
+                    <td style="font-size: 30px; font-family:Georgia,serif; color: white">{{service.name}} </td>
+                    <td style="font-size: 33px ; font-weight: bolder;"><b style="color: white">{{service.status}}</b></td>
+                </tr>
+        </tbody>
+    </table>
+</div>
