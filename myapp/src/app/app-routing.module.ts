@@ -4,13 +4,13 @@ import { ApiTestingComponent } from './api-testing/api-testing.component';
 import { HealthStatusComponent } from './health-status/health-status.component';
 
 const routes: Routes = [
-
+{
+  path:'' ,component:ApiTestingComponent
+},
   {
-    path:'',component:ApiTestingComponent
+    path:'health' ,component:HealthStatusComponent
   },
-  {
-    path:'health-status' ,component:HealthStatusComponent
-  },
+  
 ];
 
 @NgModule({
