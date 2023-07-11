@@ -5,16 +5,16 @@ import { HealthStatusComponent } from './health-status/health-status.component';
 import { HealthDynamicComponent } from './health-dynamic/health-dynamic.component';
 
 const routes: Routes = [
-{
-  path:'' ,component:ApiTestingComponent
-},
+
   {
-    path:'health' ,component:HealthStatusComponent
+    path:'',component:ApiTestingComponent
   },
   {
-    path:'dynamichealth',component:HealthDynamicComponent
+    path:'health-status' ,component:HealthStatusComponent
+  },
+  {
+    path:'health-dynamic',component:HealthDynamicComponent
   }
-  
 ];
 
 @NgModule({
