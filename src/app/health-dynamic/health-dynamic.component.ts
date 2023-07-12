@@ -39,7 +39,7 @@ export class HealthDynamicComponent implements OnInit {
           console.log('Health response:', healthDataResponse);
         },
         error => {
-          console.error('Error occurred while fetching health data:', error);
+          console.error('Error occurred:', error);
           this.services.push({ name: app.name, status: 'DOWN' });
           this.sendEmail(app.name);
         }
