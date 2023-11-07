@@ -1,4 +1,4 @@
-<p>health-status works!</p>
+<!-- <p>health-status works!</p>
 <div class="container">
     <br><br>
     <h2 style="color:darkmagenta" ><b> Microservices Status:</b></h2>
@@ -23,6 +23,46 @@
                 </tr>
         </tbody>
     </table>
+</div> -->
 
-    
-</div>
+<!-- <div class="container">
+    <br><br><br>
+    <h2 style="color: darkslategray; font-family: 'Segoe UI'; font-weight: bolder; font-size: 40px;"><b>Health Dashboard</b></h2>
+    <br>
+  
+    <div class="row">
+      <div class="col-md-3 mb-5" *ngFor="let service of services">
+        <div class="card">
+          <div class="card-header">
+           <b>{{ service.name }}</b>
+          </div>
+          <div class="card-body" [ngStyle]="{ 'background-color': service.status === 'UP' ? 'green' : 'red' }">
+            <h5 class="card-title" style="font-size: 20px; font-weight: bolder; color: white;">
+              <b>Status:</b><p style="font-size: 30px;font-weight: bolder;margin-left: 100px;color:white"><b>{{ service.status }}</b></p> 
+            </h5>
+            <br>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container">
+    <h2 class="dashboard-title">Health Dashboard</h2>
+  
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let service of services">
+        <div class="card modern-card" [ngClass]="{ 'up': service.status === 'UP', 'down': service.status === 'DOWN' }">
+          <div class="card-header">
+            {{ service.name }}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              Status:
+              <span class="status-badge">{{ service.status }}</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

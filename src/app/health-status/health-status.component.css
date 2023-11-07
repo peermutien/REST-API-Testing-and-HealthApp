@@ -1,0 +1,71 @@
+/* .card-header {
+    background-color: #f7f9fc;
+    background-color: darkslategray;
+    color: darkslategray;
+    font-weight: bolder;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .card {
+    border-radius: 50px;
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+  box-shadow: 0 30px 30px rgba(9, 9, 9, 0.9);
+}
+   */
+
+   .dashboard-title {
+    color: purple;
+    font-family: 'Segoe UI';
+    font-weight: bolder;
+    font-size: 40px;
+    margin-top: 100px;
+  }
+  
+  .modern-card {
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    margin-top: 30px;
+    box-shadow: 0px 18px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .modern-card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 30px 30px rgba(9, 9, 9, 0.9);
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .card-header {
+    padding: 10px 15px;
+    font-weight: bolder;
+    color:white
+  }
+  
+  .card-body {
+    padding: 25px;
+    color:white
+  }
+  
+  .status-badge {
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .up {
+    background-color: #4caf50;
+  }
+  
+  .down {
+    background-color: #f44336;
+  }
+  

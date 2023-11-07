@@ -1,22 +1,19 @@
-<p>health-dynamic works!</p>
 <div class="container">
-  <br><br>
-  <h2 style="color: darkmagenta;"><b>Microservices Status:</b></h2>
-  <br>
+  <h2 class="dashboard-title">Health Dashboard</h2>
 
-  <table class="table table-hover" style="width: 100%">
-    <thead>
-      <tr>
-        <th style="color: whitesmoke; font-size: 17px; background-color: darkmagenta; font-weight: 500;"><b>Microservices</b></th>
-        <th style="color: whitesmoke; font-size: 17px; background-color: darkmagenta; font-weight: 500;"><b>Status</b></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr *ngFor="let service of services" class="rdiv" [ngStyle]="{ 'background-color': service.status === 'UP' ? 'green' : 'red' }">
-        <td style="font-size: 30px; font-family: Georgia, serif; color: white">{{ service.name }}</td>
-        <td style="font-size: 33px; font-weight: bolder;"><b style="color: white">{{ service.status }}</b></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let service of services">
+      <div class="card modern-card" [ngClass]="{ 'up': service.status === 'UP', 'down': service.status === 'DOWN' }">
+        <div class="card-header">
+          {{ service.name }}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">
+            Status:
+            <span class="status-badge">{{ service.status }}</span>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

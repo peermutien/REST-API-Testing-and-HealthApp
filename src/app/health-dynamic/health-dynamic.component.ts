@@ -52,8 +52,8 @@ export class HealthDynamicComponent implements OnInit {
 
     const emailData = {
       to: 'mutientestemail@gmail.com', 
-      subject: 'URGENT ALERT Microservice Down',
-      body: `The ${serviceName} microservice is down. Please Investigate.`,
+      subject: 'URGENT ALERT APPLICATION Down',
+      body: `The ${serviceName} application is down. Please Investigate.`,
     };
 
     this.http.post(emailEndpoint, emailData)
